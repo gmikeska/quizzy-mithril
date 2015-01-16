@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quizzy 2</title>
+</head>
+<body>
+<div class='container-fluid'>
+<h1>Quizzy App 2</h1>
+<div id='app'> </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css"></script>
+<script src="vendor/mithril.js" type="text/javascript"></script>
+<script src="vendor/sugar.min.js" type="text/javascript"></script>
+<script src="src/quizzy.js" type="text/javascript"></script>
+<!-- <script src="src/arrayExtensions.js" type="text/javascript"></script> -->
+<link rel="stylesheet" href="main.css"></script>
+<script type="text/javascript">
+	Quizzy.vm.addQuestion("Question One",["Answer 1", "Answer 2", "Answer 3"],"B")
+	Quizzy.vm.addQuestion("Question Two",["Answer 1", "Answer 2", "Answer 3"],"B")
+	Quizzy.vm.addQuestion("Question Three",["Answer 1", "Answer 2", "Answer 3"],"B")
+
+
+	var appDiv = document.getElementById('app')
+
+	m.module(appDiv, {
+		controller: Quizzy.controller,
+		view: Quizzy.view
+	})
+
+</script>
+</div>
+</body>
+</html>
